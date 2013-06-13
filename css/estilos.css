@@ -14,15 +14,19 @@
 	font-style: normal;
 }
 
+body {
+	background-image: url("/imagenes/casita.jpeg");
+}
+
 @media screen and (min-width: 760px)  {
 
 header, nav {
-	background: #222;
+	background: #1e6381;
 	height: 10%;
 
-	background: -moz-radial-gradient(left, circle, #222 0%, #555 200%);
-	background: -webkit-radial-gradient(left, circle, #222 0%, #555 200%);
-	background: radial-gradient(left, circle, #222 0%, #555 200%);
+	background: -moz-radial-gradient(left, circle, #1e6381 0%, #555 200%);
+	background: -webkit-radial-gradient(left, circle, #1e6381 0%, #555 200%);
+	background: radial-gradient(left, circle, #1e6381 0%, #555 200%);
 	-moz-box-shadow: rgb(150,150,150) 5px 5px 10px;
 	-webkit-box-shadow: rgb(150,150,150) 5px 5px 10px;
 	box-shadow: rgb(150,150,150) 5px 5px 10px inset;
@@ -43,14 +47,20 @@ header, nav {
 
 #der a {
 	text-decoration: none;
+	background: #e10;
 	color: #fff;
+	padding: 0.50em;
 	font-family: tahoma;
 	font-size: 13px;
 	font-weight: bold;
 
+	border-radius: 5px;
+
 }
 
 #der a:hover {
+	background: #FFF;
+	padding: 0.50em;
 	color: crimson;
 
 }
@@ -59,13 +69,13 @@ img {
 }
 
 nav {
-	background: #222;
+	background: #333;
 	padding: 0;
 	min-height: 40px;
 
-	background: -moz-radial-gradient(right, circle, #222 200%, #555 0%);
-	background: -webkit-radial-gradient(right, circle, #222 200%, #555 0%);
-	background: radial-gradient(right, circle, #222 200%, #555 0%);
+	background: -moz-radial-gradient(right, circle, #333 200%, #555 0%);
+	background: -webkit-radial-gradient(right, circle, #333 200%, #555 0%);
+	background: radial-gradient(right, circle, #333 200%, #555 0%);
 }
 
 .mi-menu {
@@ -111,9 +121,20 @@ nav {
 .mi-menu li:first-child a{
 	border-left: none;
 }
+
+}
+.mi-menu li:first-child a:hover{
+	border-left: 3px solid #1e6381;
+}
+
 .mi-menu li:last-child a{
 	border-right: none;
 }
+
+.mi-menu li:last-child a:hover{
+	border-right:  3px solid #1e6381;
+}
+
 .mi-menu li:hover > a{
 	color: crimson;
 }
@@ -170,24 +191,41 @@ nav {
 	border: none;
 }
 
+.mi-menu a:hover {
+	background: #fff;
+	padding: 0px 13px;
+	border-radius: 5px;
+	border: 3px solid #1e6381;
+}
+
+.mi-menu ul li:last-child a:hover {
+	border: 3px solid #1e6381;	
+}
+
 section#contenedor {
 	margin: 0.5em auto;
-	max-width: 960px;
+	max-width: 100%;
 	padding: 0;
 	text-align: center;
 }
 
-section#principal, aside {
+section.principal, aside {
 	background: #1e6381;
 	border-radius: 0.5em;
 	display: inline-block;
 	margin: 0.25em;
-	max-width: 960px;
+	width: 95%;
 	min-height: 200px;
 	padding: 0.25em;
 	text-align: center;
 	vertical-align: top;
 	width: 62%;
+}
+
+section.principal, input {
+	display: block;
+	margin: 0 auto;
+
 }
 
 article {
@@ -309,7 +347,7 @@ nav {
 
 section#contenedor {
 	margin: 0.5em auto;
-	max-width: 960px;
+	max-width: 100%;
 	padding: 0;
 	text-align: center;
 }
@@ -319,12 +357,18 @@ section#principal, aside {
 	border-radius: 0.5em;
 	display: inline-block;
 	margin: 0.25em;
-	max-width: 960px;
+	max-width: 95%;
 	min-height: 200px;
 	padding: 0.25em;
 	text-align: center;
 	vertical-align: top;
 	width: 62%;
+}
+
+section.principal > input {
+	display: block;
+	margin: 0 auto;
+	
 }
 
 article {
